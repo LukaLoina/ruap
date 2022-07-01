@@ -1,38 +1,111 @@
 .App {
-  text-align: center;
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content:center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+    border: solid black 1px;
+    display: flex;
+    flex-direction:column;
+    margin: 2em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media (max-width: 850px){
+    .container{
+	margin: 2em 0;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container-element{
+    display: flex;
+    flex-direction: row;
+    border-bottom: black 1px solid;
 }
 
-.App-link {
-  color: #61dafb;
+.container-numbering{
+    width:72px;
+    min-width:72px;
+    text-align: center;
+    font-size: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-width: 650px){
+    .container-numbering{
+	width:36px;
+	min-width:36px;
+    }
+}
+
+.container-numbering-first{background-color: #004c77; color: white;}
+.container-numbering-second{background-color: #57abdb;}
+.container-numbering-third{background-color: #004c77; color: white;}
+.container-numbering-fourth{background-color: #57abdb;}
+
+.container-content{
+    max-width: 32em;
+    padding: 2em;
+    text-align: center;
+}
+
+@media (max-width: 850px){
+    .container-content{
+	padding: 0;
+    }
+}
+
+.recording-container{
+    display: flex;
+}
+
+.recording-container > audio {
+    flex-grow:2;
+    margin-bottom: 16px;
+}
+
+.recognizer-container > audio {
+    flex-grow:2;
+    margin-bottom: 8px;
+}
+
+.recording-container-button{
+    background-color: #57abdb;
+    color: white;
+    border: black 1px solid;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.container-element-button{
+    border: black 1px solid;
+    margin: 2em 0;
+    height: 3em;
+    width: 10em;
+}
+
+.container-element-button-start{
+    background-color: #a2d1ec;
+}
+
+.container-element-button-stop{
+    background-color:#004c77;
+    color: white;
+}
+
+.container-element-button-disabled{
+    background:gray;
+}    
+
+.recognizer-container{
+    display: flex;
+    flex-direction:column;
+    border: black 0px solid;
+    margin-top:2em;
+}
+
+.training-in-progress{
+    font-size: 30px;
+    font-weight: 800;
+    color:#004c77;
 }

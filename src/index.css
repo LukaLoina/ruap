@@ -5,9 +5,42 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height:100vh;
+  font-family: "Times New Roman", Times, serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    flex-align: center;
+    min-height:100vh;
+    
+}
+
+header{
+    color: white;
+    background-color: #004c77;
+    border-style:solid;
+    border-width: 0;
+    border-bottom:1px;
+    user-select: none;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+footer{
+    color: white;
+    background-color: #004c77;
+    border-style:solid;
+    border-width: 0;
+    border-top:1px;
+    text-align: center;
+    user-select: none;
 }
